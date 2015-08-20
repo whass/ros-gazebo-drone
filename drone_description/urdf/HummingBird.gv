@@ -1,0 +1,41 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"arm1" [label="arm1"];
+"motor1" [label="motor1"];
+"propeller1" [label="propeller1"];
+"arm2" [label="arm2"];
+"motor2" [label="motor2"];
+"propeller2" [label="propeller2"];
+"arm3" [label="arm3"];
+"motor3" [label="motor3"];
+"propeller3" [label="propeller3"];
+"arm4" [label="arm4"];
+"motor4" [label="motor4"];
+"propeller4" [label="propeller4"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "body_arm1" [label="xyz: 0 0 0 \nrpy: 0 -0 -3.14159"]
+"body_arm1" -> "arm1"
+"arm1" -> "arm_motor1" [label="xyz: -0.2 0 0.01 \nrpy: 0 -0 0"]
+"arm_motor1" -> "motor1"
+"motor1" -> "motor_prop1" [label="xyz: 0 0 0.005 \nrpy: 0 -0 0"]
+"motor_prop1" -> "propeller1"
+"base_link" -> "body_arm2" [label="xyz: 0 0 0 \nrpy: 0 -0 -1.5708"]
+"body_arm2" -> "arm2"
+"arm2" -> "arm_motor2" [label="xyz: -0.2 0 0.01 \nrpy: 0 -0 0"]
+"arm_motor2" -> "motor2"
+"motor2" -> "motor_prop2" [label="xyz: 0 0 0.005 \nrpy: 0 -0 0"]
+"motor_prop2" -> "propeller2"
+"base_link" -> "body_arm3" [label="xyz: 0 0 0 \nrpy: 0 0 4.13646e-13"]
+"body_arm3" -> "arm3"
+"arm3" -> "arm_motor3" [label="xyz: -0.2 0 0.01 \nrpy: 0 -0 0"]
+"arm_motor3" -> "motor3"
+"motor3" -> "motor_prop3" [label="xyz: 0 0 0.005 \nrpy: 0 -0 0"]
+"motor_prop3" -> "propeller3"
+"base_link" -> "body_arm4" [label="xyz: 0 0 0 \nrpy: 0 0 1.5708"]
+"body_arm4" -> "arm4"
+"arm4" -> "arm_motor4" [label="xyz: -0.2 0 0.01 \nrpy: 0 -0 0"]
+"arm_motor4" -> "motor4"
+"motor4" -> "motor_prop4" [label="xyz: 0 0 0.005 \nrpy: 0 -0 0"]
+"motor_prop4" -> "propeller4"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="pi" value="3.1415926535897931" />
+
+  <!-- Main Drone link -->
+  <xacro:macro name="drone_base_macro">
+    <link name="base_link">
+    
+      <inertial>
+        <mass value="1.477" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.01152" ixy="0.0" ixz="0.0" iyy="0.01152" iyz="0.0" izz="0.0218" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://drone_description/meshes/quadrotor/quadrotor_base.dae" scale="1 1 1" /> 
+        </geometry>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://drone_description/meshes/quadrotor/quadrotor_base.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+  <!-- IMU Sensor Plugin -->    
+	<gazebo>    
+    	<plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+        	<alwaysOn>true</alwaysOn>       
+        	<bodyName>base_link</bodyName>
+        	<topicName>imu_data</topicName>
+        	<serviceName>imu_service</serviceName>
+        	<gaussianNoise>0.0</gaussianNoise>
+        	<updateRate>10.0</updateRate> 
+   	    </plugin>
+	</gazebo>
+
+  </xacro:macro>
+</robot>

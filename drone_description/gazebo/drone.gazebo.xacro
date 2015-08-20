@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <ns></ns>
+      <robotSimType>drone_controller_gazebo/DroneControllerGazebo</robotSimType>
+      <controlPeriod>0.001</controlPeriod>
+    </plugin>
+  </gazebo>
+  
+</robot>

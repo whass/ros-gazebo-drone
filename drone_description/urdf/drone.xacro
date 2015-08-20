@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<robot
+  name="drone"
+  xmlns:xacro="http://ros.org/wiki/xacro"
+>
+
+  <!-- Included URDF Files -->
+  <xacro:include filename="$(find drone_description)/urdf/drone_base.xacro" />
+    
+  <!-- Instantiate quadrotor_base_macro once (has no parameters atm) -->
+  <xacro:drone_base_macro />
+  
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find drone_description)/gazebo/drone.gazebo.xacro"/>
+  
+
+</robot>

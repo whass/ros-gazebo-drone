@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>drone_controller</name>
+  <version>0.0.0</version>
+  <description>Drone controller</description>
+
+  <maintainer email="hassani.walid@gmail.com">Walid Hassani</maintainer>
+  <author email="hassani.walid@gmail.com">Walid Hassani</author>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>angles</build_depend>
+  <build_depend>control_toolbox</build_depend>
+  <build_depend>gazebo_ros_control</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>joint_limits_interface</build_depend>
+  <build_depend>drone_msgs_srvs</build_depend>
+  
+
+  <build_depend>gazebo</build_depend>
+
+  <run_depend>angles</run_depend>
+  <run_depend>control_toolbox</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>hardware_interface</run_depend>
+  <run_depend>joint_limits_interface</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>drone_msgs_srvs</run_depend>
+
+</package>

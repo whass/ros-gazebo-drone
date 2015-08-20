@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>drone_gazebo</name>
+  <version>0.0.0</version>
+  <description>Drone gazebo simulation</description>
+
+  <maintainer email="hassani.walid@gmail.com">Walid Hassani</maintainer>
+  <author email="hassani.walid@gmail.com">Walid Hassani</author>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>drone_description</run_depend>
+  <run_depend>drone_controller_gazebo</run_depend>
+</package>

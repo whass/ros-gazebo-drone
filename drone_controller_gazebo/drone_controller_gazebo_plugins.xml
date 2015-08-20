@@ -1,0 +1,12 @@
+<library path="lib/libdrone_controller_gazebo">
+
+  <class
+    name="drone_controller_gazebo/DroneControllerGazebo"
+    type="drone_controller_gazebo::DroneControllerGazebo"
+        base_class_type="gazebo_ros_control::RobotHWSim">
+    <description>
+      Drone simulation interface.
+    </description>
+  </class>
+  
+</library>
